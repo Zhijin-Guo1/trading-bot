@@ -11,7 +11,7 @@ A comprehensive machine learning system that predicts stock price movements and 
 - **Directional Prediction**: 56% accuracy (slight edge over random)
 - **Volatility Prediction**: 0.361 Spearman correlation
 - **Trading Performance**: 6.27% return with 1.00 Sharpe ratio using volatility-weighted position sizing
-- **Best Sector**: Real Estate achieves 63.6% directional accuracy with sector-specific model
+
 
 ## Project Structure
 ```
