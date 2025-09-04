@@ -211,3 +211,4 @@ CLAUDE.md
 # Keep small example/test data
 !test_data/*.csv
 !example_data/*.csv.claude/
+.claude/
