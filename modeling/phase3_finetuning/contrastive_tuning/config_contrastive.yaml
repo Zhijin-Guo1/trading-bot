@@ -1,0 +1,76 @@
+# Contrastive Learning Configuration for LlamaFactory
+# Optimized for RTX 3090 (24GB VRAM)
+
+### Model Configuration ###
+model_name_or_path: Qwen/Qwen2.5-7B-Instruct  # Can also use meta-llama/Llama-3.2-3B-Instruct for smaller model
+
+### Data Configuration ###
+dataset: contrastive_8k
+dataset_dir: ./data
+template: qwen
+cutoff_len: 2048  # Reduced for memory efficiency
+overwrite_cache: true
+preprocessing_num_workers: 4
+
+### Training Configuration ###
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_target: all
+
+### LoRA Configuration ###
+lora_rank: 32  # Higher rank for better performance
+lora_alpha: 64
+lora_dropout: 0.1
+use_rslora: true
+use_dora: false  # Set to true if memory allows
+
+### Optimization Configuration ###
+learning_rate: 1.0e-4
+num_train_epochs: 3
+max_grad_norm: 1.0
+max_samples: 10000
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+
+### Memory Optimization for RTX 3090 ###
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8  # Effective batch size = 8
+gradient_checkpointing: true
+upcast_layernorm: true
+upcast_lmhead_output: true
+flash_attn: fa2  # Flash Attention 2 for memory efficiency
+
+### Evaluation Configuration ###
+val_size: 0.1
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 100
+save_strategy: steps
+save_steps: 200
+save_total_limit: 3
+load_best_model_at_end: true
+metric_for_best_model: eval_loss
+
+### Scheduler Configuration ###
+lr_scheduler_type: cosine
+optim: adamw_torch
+adam_beta1: 0.9
+adam_beta2: 0.95
+adam_epsilon: 1.0e-8
+weight_decay: 0.1
+
+### Output Configuration ###
+output_dir: ./output_contrastive
+overwrite_output_dir: true
+logging_steps: 10
+log_level: info
+report_to: tensorboard
+run_name: contrastive_8k_qwen7b
+
+### Advanced Features ###
+deepspeed: null  # Can enable if needed for larger models
+neftune_noise_alpha: 5
+plot_loss: true
+seed: 42

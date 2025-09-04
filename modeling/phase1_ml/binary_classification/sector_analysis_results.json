@@ -1,0 +1,349 @@
+{
+  "timestamp": "2025-09-03T13:13:06.390974",
+  "overall_baseline": 51.96733481811433,
+  "global_model_accuracy": 50.519673348181136,
+  "sector_baselines": {
+    "Health Care": 50.68493150684932,
+    "Financials": 53.25077399380805,
+    "Utilities": 51.698113207547166,
+    "Materials": 51.388888888888886,
+    "Industrials": 53.98457583547558,
+    "Consumer Discretionary": 51.92982456140351,
+    "Real Estate": 50.717703349282296,
+    "Communication Services": 55.4054054054054,
+    "Consumer Staples": 51.64835164835165,
+    "Information Technology": 55.654761904761905,
+    "Energy": 50.892857142857146,
+    "OVERALL": 51.96733481811433
+  },
+  "global_results_by_sector": {
+    "Communication Services": {
+      "samples": 74,
+      "accuracy": 54.054054054054056,
+      "baseline": 55.4054054054054,
+      "vs_baseline": -1.3513513513513473,
+      "vs_52": 2.054054054054056
+    },
+    "Consumer Discretionary": {
+      "samples": 285,
+      "accuracy": 54.385964912280706,
+      "baseline": 51.92982456140351,
+      "vs_baseline": 2.456140350877199,
+      "vs_52": 2.3859649122807056
+    },
+    "Consumer Staples": {
+      "samples": 182,
+      "accuracy": 43.956043956043956,
+      "baseline": 51.64835164835165,
+      "vs_baseline": -7.692307692307693,
+      "vs_52": -8.043956043956044
+    },
+    "Energy": {
+      "samples": 112,
+      "accuracy": 49.107142857142854,
+      "baseline": 50.892857142857146,
+      "vs_baseline": -1.7857142857142918,
+      "vs_52": -2.892857142857146
+    },
+    "Financials": {
+      "samples": 323,
+      "accuracy": 48.297213622291025,
+      "baseline": 53.25077399380805,
+      "vs_baseline": -4.953560371517028,
+      "vs_52": -3.702786377708975
+    },
+    "Health Care": {
+      "samples": 365,
+      "accuracy": 51.23287671232877,
+      "baseline": 50.68493150684932,
+      "vs_baseline": 0.5479452054794507,
+      "vs_52": -0.7671232876712324
+    },
+    "Industrials": {
+      "samples": 389,
+      "accuracy": 51.9280205655527,
+      "baseline": 53.98457583547558,
+      "vs_baseline": -2.0565552699228817,
+      "vs_52": -0.07197943444730015
+    },
+    "Information Technology": {
+      "samples": 336,
+      "accuracy": 46.42857142857143,
+      "baseline": 55.654761904761905,
+      "vs_baseline": -9.226190476190474,
+      "vs_52": -5.571428571428569
+    },
+    "Materials": {
+      "samples": 144,
+      "accuracy": 56.94444444444444,
+      "baseline": 51.388888888888886,
+      "vs_baseline": 5.555555555555557,
+      "vs_52": 4.944444444444443
+    },
+    "Real Estate": {
+      "samples": 209,
+      "accuracy": 57.89473684210527,
+      "baseline": 50.717703349282296,
+      "vs_baseline": 7.1770334928229715,
+      "vs_52": 5.894736842105267
+    },
+    "Utilities": {
+      "samples": 265,
+      "accuracy": 45.28301886792453,
+      "baseline": 51.698113207547166,
+      "vs_baseline": -6.415094339622634,
+      "vs_52": -6.7169811320754675
+    }
+  },
+  "sector_specific_results": {
+    "Communication Services": {
+      "train_samples": 197,
+      "test_samples": 74,
+      "train_accuracy": 64.46700507614213,
+      "test_accuracy": 51.35135135135135,
+      "baseline": 55.4054054054054,
+      "vs_baseline": -4.054054054054056,
+      "overfitting": 13.115653724790782
+    },
+    "Consumer Discretionary": {
+      "train_samples": 1780,
+      "test_samples": 285,
+      "train_accuracy": 62.92134831460674,
+      "test_accuracy": 49.824561403508774,
+      "baseline": 51.92982456140351,
+      "vs_baseline": -2.1052631578947327,
+      "overfitting": 13.096786911097965
+    },
+    "Consumer Staples": {
+      "train_samples": 878,
+      "test_samples": 182,
+      "train_accuracy": 58.88382687927107,
+      "test_accuracy": 52.74725274725275,
+      "baseline": 51.64835164835165,
+      "vs_baseline": 1.098901098901102,
+      "overfitting": 6.136574132018318
+    },
+    "Energy": {
+      "train_samples": 466,
+      "test_samples": 112,
+      "train_accuracy": 64.59227467811158,
+      "test_accuracy": 44.642857142857146,
+      "baseline": 50.892857142857146,
+      "vs_baseline": -6.25,
+      "overfitting": 19.949417535254433
+    },
+    "Financials": {
+      "train_samples": 1066,
+      "test_samples": 323,
+      "train_accuracy": 61.53846153846154,
+      "test_accuracy": 49.22600619195047,
+      "baseline": 53.25077399380805,
+      "vs_baseline": -4.024767801857585,
+      "overfitting": 12.312455346511072
+    },
+    "Health Care": {
+      "train_samples": 1232,
+      "test_samples": 365,
+      "train_accuracy": 63.230519480519476,
+      "test_accuracy": 50.68493150684932,
+      "baseline": 50.68493150684932,
+      "vs_baseline": 0.0,
+      "overfitting": 12.545587973670159
+    },
+    "Industrials": {
+      "train_samples": 1949,
+      "test_samples": 389,
+      "train_accuracy": 62.64751154438173,
+      "test_accuracy": 50.38560411311054,
+      "baseline": 53.98457583547558,
+      "vs_baseline": -3.598971722365043,
+      "overfitting": 12.26190743127119
+    },
+    "Information Technology": {
+      "train_samples": 1357,
+      "test_samples": 336,
+      "train_accuracy": 61.82756079587325,
+      "test_accuracy": 50.0,
+      "baseline": 55.654761904761905,
+      "vs_baseline": -5.654761904761905,
+      "overfitting": 11.827560795873246
+    },
+    "Materials": {
+      "train_samples": 713,
+      "test_samples": 144,
+      "train_accuracy": 65.35764375876579,
+      "test_accuracy": 49.30555555555556,
+      "baseline": 51.388888888888886,
+      "vs_baseline": -2.0833333333333286,
+      "overfitting": 16.052088203210232
+    },
+    "Real Estate": {
+      "train_samples": 1018,
+      "test_samples": 209,
+      "train_accuracy": 63.45776031434185,
+      "test_accuracy": 48.32535885167464,
+      "baseline": 50.717703349282296,
+      "vs_baseline": -2.3923444976076524,
+      "overfitting": 15.132401462667204
+    },
+    "Utilities": {
+      "train_samples": 1072,
+      "test_samples": 265,
+      "train_accuracy": 63.43283582089553,
+      "test_accuracy": 46.79245283018868,
+      "baseline": 51.698113207547166,
+      "vs_baseline": -4.905660377358487,
+      "overfitting": 16.640382990706847
+    }
+  },
+  "comparison": {
+    "Communication Services": {
+      "global_accuracy": 54.054054054054056,
+      "sector_accuracy": 51.35135135135135,
+      "difference": -2.702702702702709,
+      "winner": "Global"
+    },
+    "Consumer Discretionary": {
+      "global_accuracy": 54.385964912280706,
+      "sector_accuracy": 49.824561403508774,
+      "difference": -4.561403508771932,
+      "winner": "Global"
+    },
+    "Consumer Staples": {
+      "global_accuracy": 43.956043956043956,
+      "sector_accuracy": 52.74725274725275,
+      "difference": 8.791208791208796,
+      "winner": "Sector"
+    },
+    "Energy": {
+      "global_accuracy": 49.107142857142854,
+      "sector_accuracy": 44.642857142857146,
+      "difference": -4.464285714285708,
+      "winner": "Global"
+    },
+    "Financials": {
+      "global_accuracy": 48.297213622291025,
+      "sector_accuracy": 49.22600619195047,
+      "difference": 0.9287925696594428,
+      "winner": "Sector"
+    },
+    "Health Care": {
+      "global_accuracy": 51.23287671232877,
+      "sector_accuracy": 50.68493150684932,
+      "difference": -0.5479452054794507,
+      "winner": "Global"
+    },
+    "Industrials": {
+      "global_accuracy": 51.9280205655527,
+      "sector_accuracy": 50.38560411311054,
+      "difference": -1.5424164524421613,
+      "winner": "Global"
+    },
+    "Information Technology": {
+      "global_accuracy": 46.42857142857143,
+      "sector_accuracy": 50.0,
+      "difference": 3.5714285714285694,
+      "winner": "Sector"
+    },
+    "Materials": {
+      "global_accuracy": 56.94444444444444,
+      "sector_accuracy": 49.30555555555556,
+      "difference": -7.638888888888886,
+      "winner": "Global"
+    },
+    "Real Estate": {
+      "global_accuracy": 57.89473684210527,
+      "sector_accuracy": 48.32535885167464,
+      "difference": -9.569377990430624,
+      "winner": "Global"
+    },
+    "Utilities": {
+      "global_accuracy": 45.28301886792453,
+      "sector_accuracy": 46.79245283018868,
+      "difference": 1.509433962264147,
+      "winner": "Sector"
+    }
+  },
+  "predictability_ranking": [
+    {
+      "sector": "Real Estate",
+      "best_accuracy": 57.89473684210527,
+      "baseline": 50.717703349282296,
+      "edge_over_baseline": 7.1770334928229715,
+      "edge_over_52": 5.894736842105267,
+      "best_model": "global"
+    },
+    {
+      "sector": "Materials",
+      "best_accuracy": 56.94444444444444,
+      "baseline": 51.388888888888886,
+      "edge_over_baseline": 5.555555555555557,
+      "edge_over_52": 4.944444444444443,
+      "best_model": "global"
+    },
+    {
+      "sector": "Consumer Discretionary",
+      "best_accuracy": 54.385964912280706,
+      "baseline": 51.92982456140351,
+      "edge_over_baseline": 2.456140350877199,
+      "edge_over_52": 2.3859649122807056,
+      "best_model": "global"
+    },
+    {
+      "sector": "Consumer Staples",
+      "best_accuracy": 52.74725274725275,
+      "baseline": 51.64835164835165,
+      "edge_over_baseline": 1.098901098901102,
+      "edge_over_52": 0.7472527472527517,
+      "best_model": "sector"
+    },
+    {
+      "sector": "Health Care",
+      "best_accuracy": 51.23287671232877,
+      "baseline": 50.68493150684932,
+      "edge_over_baseline": 0.5479452054794507,
+      "edge_over_52": -0.7671232876712324,
+      "best_model": "global"
+    },
+    {
+      "sector": "Communication Services",
+      "best_accuracy": 54.054054054054056,
+      "baseline": 55.4054054054054,
+      "edge_over_baseline": -1.3513513513513473,
+      "edge_over_52": 2.054054054054056,
+      "best_model": "global"
+    },
+    {
+      "sector": "Energy",
+      "best_accuracy": 49.107142857142854,
+      "baseline": 50.892857142857146,
+      "edge_over_baseline": -1.7857142857142918,
+      "edge_over_52": -2.892857142857146,
+      "best_model": "global"
+    },
+    {
+      "sector": "Industrials",
+      "best_accuracy": 51.9280205655527,
+      "baseline": 53.98457583547558,
+      "edge_over_baseline": -2.0565552699228817,
+      "edge_over_52": -0.07197943444730015,
+      "best_model": "global"
+    },
+    {
+      "sector": "Financials",
+      "best_accuracy": 49.22600619195047,
+      "baseline": 53.25077399380805,
+      "edge_over_baseline": -4.024767801857585,
+      "edge_over_52": -2.773993808049532,
+      "best_model": "sector"
+    },
+    {
+      "sector": "Utilities",
+      "best_accuracy": 46.79245283018868,
+      "baseline": 51.698113207547166,
+      "edge_over_baseline": -4.905660377358487,
+      "edge_over_52": -5.2075471698113205,
+      "best_model": "sector"
+    }
+  ]
+}

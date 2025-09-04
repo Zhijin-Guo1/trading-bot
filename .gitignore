@@ -1,0 +1,213 @@
+# Environment and secrets
+.env
+*.env.local
+*.env.production
+
+# API Keys and credentials
+config/secrets.json
+secrets.json
+api_keys.txt
+
+# Data files (large/generated)
+**/*.csv
+*.csv
+*.xlsx
+*.xls
+*.tsv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+
+# Model files
+*.pkl
+*.pickle
+*.joblib
+# TF-IDF and checkpoint models can be large
+tfidf.pkl
+chunks.pkl
+**/checkpoints/*.pkl
+**/checkpoints/*.json
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.keras
+*.safetensors
+*.onnx
+
+# Large JSON files (but keep small config files)
+**/8K_*_text.json
+**/8K_*.json
+**/merged_texts_*.json
+**/all_summaries.json
+**/embeddings_*.json
+results/**/*.json
+**/checkpoint_batch_*.json
+**/summaries.json
+**/summaries_*.json
+# Specific large JSON files
+data/data_collection/eight_k/**/*.json
+summarization/gpt_summarization/results/**/*.json
+modeling/phase1_ml/next_day_data/*.json
+
+# Data directories (but keep the Python scripts)
+data/data_collection/eight_k/
+data/data_processing/processed_data/
+data/data_processing/enhanced_eight_k/
+data/data_collection/
+data/data_processing/
+data/
+!data/data_collection/*.py
+!data/data_processing/*.py
+!data/*.py
+
+# Results and outputs
+modeling/phase1_ml/data/
+modeling/phase1_ml/filtered_data/
+modeling/phase1_ml/next_day_data/
+modeling/phase1_ml/regression/results/
+modeling/phase1_ml/binary_classification/results/
+modeling/phase2_llm_api/results/
+modeling/phase3_finetuning/*/results/
+modeling/phase4_RAG/results/
+modeling/llm_features/*.csv
+modeling/llm_features/filtered_data/
+modeling/llm_features/checkpoint_*.csv
+modeling/llm_features/enhanced_*.csv
+summarization/gpt_summarization/results/
+summarization/rag_system/results/
+summarization/rag_system/data/
+backtesting/results/
+
+# Embeddings and vector stores
+**/embeddings/
+**/chroma_db/
+**/chromadb/
+**/vectorstore/
+**/faiss_index/
+# ChromaDB specific
+*.bin
+chroma.sqlite3
+*.sqlite3
+
+# Cache and temporary files
+cache/
+logs/
+temp/
+*.tmp
+*.temp
+*.log
+*.cache
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Project specific directories (data storage)
+raw_data/
+processed_data/
+reports/
+backtest_results/
+model_outputs/
+
+# Large media files
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.mkv
+*.webm
+
+# Compressed files (often contain data)
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.gz
+*.bz2
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# Keep important documentation
+!README.md
+!BACKTEST_REPORT.md
+!CONFIDENCE_ANALYSIS_REPORT.md
+!SECTOR_ANALYSIS_REPORT.md
+!data_processing.md
+# Exclude CLAUDE.md (internal notes)
+CLAUDE.md
+
+# Keep configuration files
+!requirements.txt
+!setup.py
+!pyproject.toml
+!environment.yml
+
+# Keep pipeline diagrams
+!figs/
+!figs/pipeline.jpg
+!figs/LLM_usage.jpg
+!figs/Roberta.png
+
+# Keep small example/test data
+!test_data/*.csv
+!example_data/*.csv.claude/

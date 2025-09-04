@@ -1,0 +1,9 @@
+{
+  "datasets_processed": 3,
+  "total_cost": 29.82591175000044,
+  "total_tokens": 119303647,
+  "duration_seconds": 15355.490445,
+  "success_tasks": 127410,
+  "error_tasks": 0,
+  "timestamp": "2025-09-02T04:12:21.110437"
+}

@@ -1,0 +1,75 @@
+{
+  "timestamp": "2025-09-04T06:58:40.842869",
+  "gpu_available": true,
+  "feature_types_tested": [
+    "Embedding Only",
+    "Embedding + LLM",
+    "Embedding + LLM + Market"
+  ],
+  "best_models_by_feature_type": {
+    "Embedding Only": {
+      "regression": {
+        "model": "SBERT-MPNet",
+        "correlation": 0.17488406549050917,
+        "r2": -0.014202142040253385,
+        "mae": 1.801987812903694
+      },
+      "classification": {
+        "model": "E5-base",
+        "f1": 0.419124218051832,
+        "auc": 0.5831301942198891,
+        "accuracy": 0.5174461766889383
+      }
+    },
+    "Embedding + LLM": {
+      "regression": {
+        "model": "RoBERTa-base",
+        "correlation": 0.20233667270257769,
+        "r2": 0.026424551397098983,
+        "mae": 1.8928750237958472
+      },
+      "classification": {
+        "model": "SBERT-DistilRoBERTa",
+        "f1": 0.42917103882476393,
+        "auc": 0.6087363518860758,
+        "accuracy": 0.5961395694135115
+      }
+    },
+    "Embedding + LLM + Market": {
+      "regression": {
+        "model": "DistilBERT",
+        "correlation": 0.3467630552120108,
+        "r2": 0.1100446138233997,
+        "mae": 1.722454243803356
+      },
+      "classification": {
+        "model": "SBERT-DistilRoBERTa",
+        "f1": 0.4240890688259109,
+        "auc": 0.6032749804419552,
+        "accuracy": 0.5775798069784707
+      }
+    }
+  },
+  "average_performance_by_feature_type": {
+    "Embedding Only": {
+      "avg_correlation": 0.12433702831477493,
+      "avg_f1": 0.39647939157794426,
+      "avg_train_time": 17.441878581047057
+    },
+    "Embedding + LLM": {
+      "avg_correlation": 0.15701215359252454,
+      "avg_f1": 0.4083092393824764,
+      "avg_train_time": 12.711051034927369
+    },
+    "Embedding + LLM + Market": {
+      "avg_correlation": 0.3112993714640051,
+      "avg_f1": 0.4095669470363029,
+      "avg_train_time": 10.91890799999237
+    }
+  },
+  "feature_contribution_analysis": {
+    "llm_features_improvement_percent": 26.279480634705532,
+    "market_features_improvement_percent": 98.26450649921298,
+    "total_improvement_percent": 150.36738909016816
+  }
+}

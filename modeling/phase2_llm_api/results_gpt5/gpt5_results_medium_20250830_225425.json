@@ -1,0 +1,175 @@
+{
+  "model": "gpt-5",
+  "effort": "medium",
+  "data_year": 2018,
+  "test_size": 100,
+  "train_size": 3847,
+  "timestamp": "2025-08-30T22:15:40.326312",
+  "strategies": {
+    "zero_shot": {
+      "strategy": "zero_shot",
+      "effort": "medium",
+      "dataset_size": 100,
+      "accuracy": 0.38,
+      "precision_per_class": {
+        "UP": 0.4444444444444444,
+        "DOWN": 0.5,
+        "STAY": 0.35135135135135137
+      },
+      "recall_per_class": {
+        "UP": 0.22857142857142856,
+        "DOWN": 0.12121212121212122,
+        "STAY": 0.8125
+      },
+      "f1_per_class": {
+        "UP": 0.3018867924528302,
+        "DOWN": 0.1951219512195122,
+        "STAY": 0.49056603773584906
+      },
+      "precision_weighted": 0.432987987987988,
+      "recall_weighted": 0.38,
+      "f1_weighted": 0.32703175333640133,
+      "confusion_matrix": [
+        [
+          8,
+          1,
+          26
+        ],
+        [
+          7,
+          4,
+          22
+        ],
+        [
+          3,
+          3,
+          26
+        ]
+      ],
+      "predicted_distribution": {
+        "UP": 0.18,
+        "DOWN": 0.08,
+        "STAY": 0.74
+      },
+      "actual_distribution": {
+        "UP": 0.35,
+        "DOWN": 0.33,
+        "STAY": 0.32
+      },
+      "avg_confidence": 0.8260000000000001,
+      "total_tokens": 82461,
+      "total_cost": 0.02061525,
+      "avg_response_time": 5.303554940223694
+    },
+    "few_shot": {
+      "strategy": "few_shot",
+      "effort": "medium",
+      "dataset_size": 100,
+      "accuracy": 0.4,
+      "precision_per_class": {
+        "UP": 0.5,
+        "DOWN": 0.38461538461538464,
+        "STAY": 0.3835616438356164
+      },
+      "recall_per_class": {
+        "UP": 0.2,
+        "DOWN": 0.15151515151515152,
+        "STAY": 0.875
+      },
+      "f1_per_class": {
+        "UP": 0.2857142857142857,
+        "DOWN": 0.21739130434782608,
+        "STAY": 0.5333333333333333
+      },
+      "precision_weighted": 0.4246628029504742,
+      "recall_weighted": 0.4,
+      "f1_weighted": 0.3424057971014493,
+      "confusion_matrix": [
+        [
+          7,
+          5,
+          23
+        ],
+        [
+          6,
+          5,
+          22
+        ],
+        [
+          1,
+          3,
+          28
+        ]
+      ],
+      "predicted_distribution": {
+        "UP": 0.14,
+        "DOWN": 0.13,
+        "STAY": 0.73
+      },
+      "actual_distribution": {
+        "UP": 0.35,
+        "DOWN": 0.33,
+        "STAY": 0.32
+      },
+      "avg_confidence": 0.8270000000000001,
+      "total_tokens": 146579,
+      "total_cost": 0.036644749999999976,
+      "avg_response_time": 6.29786904335022
+    },
+    "chain_of_thought": {
+      "strategy": "chain_of_thought",
+      "effort": "medium",
+      "dataset_size": 100,
+      "accuracy": 0.33,
+      "precision_per_class": {
+        "UP": 0.3541666666666667,
+        "DOWN": 0.6666666666666666,
+        "STAY": 0.2857142857142857
+      },
+      "recall_per_class": {
+        "UP": 0.4857142857142857,
+        "DOWN": 0.06060606060606061,
+        "STAY": 0.4375
+      },
+      "f1_per_class": {
+        "UP": 0.40963855421686746,
+        "DOWN": 0.1111111111111111,
+        "STAY": 0.345679012345679
+      },
+      "precision_weighted": 0.43538690476190484,
+      "recall_weighted": 0.33,
+      "f1_weighted": 0.29065744459318754,
+      "confusion_matrix": [
+        [
+          17,
+          0,
+          18
+        ],
+        [
+          14,
+          2,
+          17
+        ],
+        [
+          17,
+          1,
+          14
+        ]
+      ],
+      "predicted_distribution": {
+        "UP": 0.48,
+        "DOWN": 0.03,
+        "STAY": 0.49
+      },
+      "actual_distribution": {
+        "UP": 0.35,
+        "DOWN": 0.33,
+        "STAY": 0.32
+      },
+      "avg_confidence": 0.8470000000000002,
+      "total_tokens": 126074,
+      "total_cost": 0.03151849999999999,
+      "avg_response_time": 10.137123517990112
+    }
+  }
+}
