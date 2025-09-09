@@ -77,6 +77,18 @@ python pipeline_with_summarization.py --full
 # 6. Create final ML datasets (60/20/20 split)
 cd ../../../modeling/phase1_ml
 python prepare_data.py
+
+# 7. Extract LLM features (24 semantic features using GPT-5)
+cd ../llm_features
+python run_full_extraction.py
+# Processes train/val/test sets from phase1_ml/data/
+# Output: enhanced_train.csv, enhanced_val.csv, enhanced_test.csv
+# Cost: ~$20-30 depending on dataset size
+# Supports checkpointing for interruption recovery
+
+# Optional: Filter out routine filings to reduce noise
+python filter_routine_filings.py
+# Creates filtered_data/ directory with cleaned datasets
 ```
 
 ### Quick Test (2019 Only)
@@ -91,6 +103,10 @@ python gpt_summarization_2019.py
 
 cd ../../modeling/phase1_ml
 python prepare_data.py --years 2019
+
+# Test LLM feature extraction with 20 samples
+cd ../llm_features
+python test_20_with_api.py  # Tests 20 random samples (~$0.50)
 ```
 
 ## Model Training
@@ -98,12 +114,14 @@ python prepare_data.py --years 2019
 ### Binary Classification (Direction)
 ```bash
 cd modeling/phase1_ml/binary_classification
+# Uses enhanced datasets with LLM features from step 7
 python train_combined_features.py
 ```
 
 ### Volatility Regression
 ```bash
 cd modeling/phase1_ml/regression
+# Uses enhanced datasets with LLM features from step 7
 python train_combined_regression.py
 ```
 
@@ -160,10 +178,10 @@ The system leverages GPT-4 to extract 25 high-level semantic features from raw 8
 - Confidence-based filtering
 
 ### Phase 2: LLM API
-- Zero-shot GPT-4 classification
-- Few-shot learning
-- Chain-of-thought prompting
-- Cost-performance analysis
+- Direct GPT-5 binary prediction (UP/DOWN)
+- Zero-shot, few-shot, and chain-of-thought prompting
+- Achieved ~52% accuracy
+- Run: `cd modeling/phase2_llm_api && python run_gpt5_binary_experiment.py`
 
 ### Phase 3: Fine-tuning
 - FinBERT/RoBERTa fine-tuning
